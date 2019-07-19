@@ -3,8 +3,8 @@
   "version": "1.2.3",
   "description": "ftth chatbot test",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "script": {
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
