@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
+app.get('/', function (req,res){
+    res.send("Hello world, I am a chatBot")
+})
+
 app.post('/webhook', (req, res) => {
     let body = req.body;
 
