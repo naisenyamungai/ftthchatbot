@@ -1,0 +1,6 @@
+module.exports = {
+    FB_PAGE_TOKEN:'EAAGHE0MqZCY0BAOdMAepRCN8yaZATpEhxyrjngnP3YKrNTipC3KYASSe6tHhpZB5QZAl2k4uoqvXyotPe9nShqK23hXFZBVe9M3Xu6p2NZA2RiloWfHDqGP5c8JLLQ7NHVvIbsLGCLYwokRraBfZAy70hXzMRwy7kUpG4ZA22plispxgVMGIPJZBo',
+    FB_VERIFY_TOKEN:'myvoiceisnotmypassword',
+    API_AI_CLIENT_ACCESS_TOKEN:'be97f8178a1842399d59352181621e7b',
+    SERVER_URL:"https://ftth-bot.herokuapp.com/",
+};
