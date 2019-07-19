@@ -1,11 +1,13 @@
 {
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "name": "ftthchatbottest",
   "version": "1.2.3",
   "description": "ftth chatbot test",
   "main": "index.js",
-  "script": {
-    "start":"node index.js"
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/naisenyamungai/ftthchatbot.git"
