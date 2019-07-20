@@ -1,2 +1,4 @@
 export const API_AI_CLIENT_ACCESS_TOKEN = 'be97f8178a1842399d59352181621e7b';
 export const SERVER_URL = "https://ftth-bot.herokuapp.com/";
+export const FB_PAGE_TOKEN = 'EAAGHE0MqZCY0BAJoo40ZA6eae2Xl4KtwMtoVaZCrSFOtKO3aeGj2guRbeyiqwhopbsoESEXrbbZBxhoSfDWhZAo8TN8CiDZCTZC9X1SLZAapnsmLsPstQY6yGJ5RGnbRmmADu5e9VZAZBjZBMndVAVxOSZBZBXIBXjSW8FTA3vUOJ8ti2Gbip015ZALl7E';
+export const FB_VERIFY_TOKEN = 'mamboitalia0722'
