@@ -18,29 +18,31 @@ if (!config.SERVER_URL) { //used for ink to static files
 }
 
 
-app.set('port', (process.env.PORT || 5000))
+
+
+
+
+
+
+
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(bodyParser.urlencoded({
-    extended:false
-}));
-
-// app.listen(process.env.PORT || 4000, function(){
-//     console.log('webhook is listening');
-// });
+app.listen(process.env.PORT || 4000, function(){
+    console.log('webhook is listening');
+});
 
 app.get('/', function (req,res){
     res.send("Hello world, I am a chatBot")
 })
 
 app.post('/webhook', (req, res) => {
-    var data = req.body;
-    console.log(JSON.stringify(data));
+    let body = req.body;
 
-    if(data.object === 'page'){
+    if(body.object === 'page'){
 
-        data.entry.forEach(function(pageEntry){
+        body.entry.forEach(function(entry){
 
             let webhook_event = entry.messaging[0];
             console.log(webhook_event);
