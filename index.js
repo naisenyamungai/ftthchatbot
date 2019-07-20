@@ -7,7 +7,9 @@ const
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
+app.listen(process.env.PORT || 4000, function(){
+    console.log('webhook is listening');
+});
 
 app.get('/', function (req,res){
     res.send("Hello world, I am a chatBot")
