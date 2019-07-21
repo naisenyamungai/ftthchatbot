@@ -11,12 +11,12 @@ app.post('/', function(req, res){
     console.log(req.body)
 
     if(req.body.result.action == "payment"){
-        var methods = req.body.result.parameters.methods;
-        console.log(methods);
+        var method = req.body.result.parameters.method;
+        console.log(method);
 
         var response = "";
 
-        if(methods == "mpesa"){
+        if(method == "mpesa"){
             response = "Dial *400# and follow procedure";
         }else{
             response = "No";
