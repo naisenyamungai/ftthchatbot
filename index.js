@@ -7,8 +7,6 @@ const
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-port = process.env.PORT || 4000;
-
 app.post('/', function(req, res){
     console.log(req.body)
 
@@ -17,10 +15,11 @@ app.post('/', function(req, res){
         console.log(methods);
     }
 
-
 })
 
-app.listen(port);
+app.listen(process.env.PORT || 4000);
+
+// , () => console.log('webhook is listening')
 
 // app.get('/', function (req,res){
 //     res.send("Hello I am a chatbot")
