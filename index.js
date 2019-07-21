@@ -7,11 +7,20 @@ const
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
+port = process.env.PORT || 4000;
+
 app.post('/', function(req, res){
     console.log(req.body)
+
+    if(req.body.result.action == "payment"){
+        var paymentmethods = req.body.result.parameters.methods;
+        console.log(methods);
+    }
+
+
 })
 
-app.listen(process.env.PORT || 4000, () => console.log('webhook is listening'));
+app.listen(port);
 
 // app.get('/', function (req,res){
 //     res.send("Hello I am a chatbot")
