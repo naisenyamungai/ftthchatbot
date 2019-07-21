@@ -16,7 +16,7 @@ app.post('/', function(req, res){
 
         var response = "";
 
-        if(methods === "mpesa"){
+        if(methods == "mpesa"){
             response = "Dial *400# and follow procedure";
         }else{
             response = "No";
