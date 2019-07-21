@@ -10,13 +10,13 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.post('/', function(req, res){
     console.log(req.body)
 
-    if(req.body.result.action == "payment"){
+    if(req.body.result.action == "paymentmethods"){
         var methods = req.body.result.parameters.methods;
         console.log(methods);
 
         var response = "";
 
-        if(methods == "mpesa"){
+        if(methods === "mpesa"){
             response = "Dial *400# and follow procedure";
         }else{
             response = "No";
