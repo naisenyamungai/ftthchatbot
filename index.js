@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.post('/', function(req, res){
     console.log(req.body)
 
-    if(req.body.result.action == "paymentmethods"){
+    if(req.body.result.action == "payment"){
         var methods = req.body.result.parameters.methods;
         console.log(methods);
 
