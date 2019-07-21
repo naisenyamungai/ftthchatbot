@@ -5,7 +5,11 @@ const
     bodyParser = require('body-parser'),
     app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:false}));
+
+app.post('/', function(req, res){
+    console.log(req.body)
+})
 
 app.listen(process.env.PORT || 4000, () => console.log('webhook is listening'));
 
