@@ -11,24 +11,45 @@ app.use(bodyParser.json());
 app.post('/', function(req, res){
     console.log(req.body)
 
-    if(req.body.queryResult.action == "payment"){
+      if(req.body.queryResult.action == "checkvote"){
 
-        console.log("Payment Action");
-        var method = req.body.queryResult.parameters.method;
-        console.log(method);
+        console.log("Voting");
+        var age = req.body.queryResult.parameters.age;
+        console.log(age);
 
         var response = "";
 
-        if(method >= 'bonga points'){
-            response = "Dial *400# and follow procedure";
-        }else{
-            response = "No";
-        }
-        res.json({
-            "displayText": response
-        })
+        // if(method >= 'bonga points'){
+        //     response = "Dial *400# and follow procedure";
+        // }else{
+        //     response = "No";
+        // }
+        // res.json({
+        //     "displayText": response
+        // })
 
     }
+
+
+
+    // if(req.body.queryResult.action == "payment"){
+
+    //     console.log("Payment Action");
+    //     var method = req.body.queryResult.parameters.method;
+    //     console.log(method);
+
+    //     var response = "";
+
+    //     if(method >= 'bonga points'){
+    //         response = "Dial *400# and follow procedure";
+    //     }else{
+    //         response = "No";
+    //     }
+    //     res.json({
+    //         "displayText": response
+    //     })
+
+    // }
 
 })
 
