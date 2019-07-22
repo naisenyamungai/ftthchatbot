@@ -15,19 +15,21 @@ app.post('/', function(req, res){
     if(req.body.queryResult.action == "payment"){
 
         
-        var method = req.body.queryResult.parameters.methods;
+        var method = req.body.queryResult.parameters.method;
         console.log(method);
 
         var response = "";
 
-        if('bonga points'){
-            response = "Dial *400# and follow procedure";
+        if(method == 'bonga points'){
+            console.log(true)
+            // response = "Dial *400# and follow procedure";
         }else{
-            response = "No";
+            console.log(false)
+            // response = "No";
         }
-        res.json({
-            "displayText": response
-        })
+        // res.json({
+        //     "displayText": response
+        // })
     }
 })
 
