@@ -11,6 +11,8 @@ app.post('/', function(req, res){
     console.log(req.body)
 
     if(req.body.result.action == "payment"){
+
+        console.log("Payment Action");
         var method = req.body.result.parameters.method;
         console.log(method);
 
@@ -33,9 +35,9 @@ app.listen(process.env.PORT || 4000);
 
 // , () => console.log('webhook is listening')
 
-app.get('/', function (req,res){
-    res.send("Hello I am a chatbot")
-})
+// app.get('/', function (req,res){
+//     res.send("Hello I am a chatbot")
+// })
 
 app.post('/webhook', (req, res) => {
     let body = req.body;
