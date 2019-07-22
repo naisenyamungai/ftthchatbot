@@ -29,7 +29,7 @@ app.post('/', function(req, res){
             response = "No";
         }
         res.json({
-            "fulfillmentMessages": response
+            "fulfillment_text": response
             // "displayText": response
         })
     }
