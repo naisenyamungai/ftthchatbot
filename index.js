@@ -19,14 +19,14 @@ app.post('/', function(req, res){
 
         var response = "";
 
-        // if(method == "method"){
-        //     response = "Dial *400# and follow procedure";
-        // }else{
-        //     response = "No";
-        // }
-        // res.json({
-        //     "displayText": response
-        // })
+        if(method == 'bonga points'){
+            response = "Dial *400# and follow procedure";
+        }else{
+            response = "No";
+        }
+        res.json({
+            "displayText": response
+        })
 
     }
 
