@@ -23,10 +23,16 @@ app.post('/', function(req, res){
 
         if(method == 'bonga points'){
             // console.log("Dial *400# and follow procedure")
-            response = "Dial *400# and follow procedure";
-        }else{
+            response = "Dial *400#, select manage subscriptions, select your account then select renew subscription, select the account you are renewing then select bonga points";
+        }else if(method == 'mpesa'){
             // console.log(false)
-            response = "No";
+            response = "Use M-PESA PAYBILL no. 150501 and key in your Safaricom Fibre Account number under the account section";
+        }else if(method == 'USSD'){
+            response = "Dial *400#, select manage subscriptions, select preferred package and make payment via mpesa"
+        }else if(method == "Home App"){
+            response = "Download the App from Play/AppStore, upon registration select the PAY tab"
+        } else{
+            response = "Kindly select one method of paymemt so that we can serve you better. Thank you."
         }
         res.json({
             "fulfillment_text": response
