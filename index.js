@@ -14,19 +14,19 @@ app.post('/', function(req, res){
     if(req.body.queryResult.action == "payment"){
 
         console.log("Payment Action");
-        //var method = req.body.result.parameters.method;
-        //console.log(method);
+        var method = req.body.queryResult.parameters.method;
+        console.log(method);
 
-        //var response = "";
+        var response = "";
 
-        // if(method == "mpesa"){
-        //     response = "Dial *400# and follow procedure";
-        // }else{
-        //     response = "No";
-        // }
-        // res.json({
-        //     "displayText": response
-        // })
+        if(method == "method"){
+            response = "Dial *400# and follow procedure";
+        }else{
+            response = "No";
+        }
+        res.json({
+            "displayText": response
+        })
 
     }
 
