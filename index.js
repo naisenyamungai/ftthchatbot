@@ -27,7 +27,6 @@ app.post('/', function(req, res){
         res.json({
             "displayText": response
         })
-
     }
 })
 
