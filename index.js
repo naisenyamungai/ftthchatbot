@@ -4,30 +4,31 @@ const
     express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
-app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 app.post('/', function(req, res){
     console.log(req.body)
 
-    if(req.body.result.action == "payment"){
+    // if(req.body.result.action == "payment"){
 
-        console.log("Payment Action");
-        var method = req.body.result.parameters.method;
-        console.log(method);
+    //     console.log("Payment Action");
+    //     var method = req.body.result.parameters.method;
+    //     console.log(method);
 
-        var response = "";
+    //     var response = "";
 
-        if(method == "mpesa"){
-            response = "Dial *400# and follow procedure";
-        }else{
-            response = "No";
-        }
-        res.json({
-            "displayText": response
-        })
+    //     if(method == "mpesa"){
+    //         response = "Dial *400# and follow procedure";
+    //     }else{
+    //         response = "No";
+    //     }
+    //     res.json({
+    //         "displayText": response
+    //     })
 
-    }
+    // }
 
 })
 
