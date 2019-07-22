@@ -32,7 +32,7 @@ app.post('/', function(req, res){
         }else if(method == "Home App"){
             response = "Download the App from Play/AppStore, upon registration select the PAY tab"
         } else{
-            response = "Kindly select one method of paymemt so that we can serve you better. Thank you."
+            response = "Kindly select one method of payment so that we can serve you better. Thank you."
         }
         res.json({
             "fulfillment_text": response
