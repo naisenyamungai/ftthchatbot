@@ -19,7 +19,7 @@ app.post('/', function(req, res){
 
         var response = "";
 
-        if(method == 'bonga points'){
+        if(method >= 'bonga points'){
             response = "Dial *400# and follow procedure";
         }else{
             response = "No";
