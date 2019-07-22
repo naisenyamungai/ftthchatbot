@@ -21,16 +21,15 @@ app.post('/', function(req, res){
         var response = "";
 
         if(method == 'bonga points'){
-            console.log("Dial *400# and follow procedure")
-
-            // response = "Dial *400# and follow procedure";
+            // console.log("Dial *400# and follow procedure")
+            response = "Dial *400# and follow procedure";
         }else{
-            console.log(false)
-            // response = "No";
+            // console.log(false)
+            response = "No";
         }
-        // res.json({
-        //     "displayText": response
-        // })
+        res.json({
+            "displayText": response
+        })
     }
 })
 
