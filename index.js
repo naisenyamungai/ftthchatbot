@@ -27,9 +27,9 @@ app.post('/', function(req, res){
         }else if(method == 'mpesa'){
             // console.log(false)
             response = "Use M-PESA PAYBILL no. 150501 and key in your Safaricom Fibre Account number under the account section";
-        }else if(method == 'USSD'){
+        }else if(method == 'ussd'){
             response = "Dial *400#, select manage subscriptions, select preferred package and make payment via mpesa";
-        }else if(method == "Home App"){
+        }else if(method == 'Home App'){
             response = "Download the App from Play/AppStore, upon registration select the PAY tab";
         } else{
             response = "Kindly select one method of payment so that we can serve you better. Thank you."
