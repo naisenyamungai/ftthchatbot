@@ -5,6 +5,7 @@ const
     bodyParser = require('body-parser'),
     app = express();
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
@@ -19,13 +20,13 @@ app.post('/', function(req, res){
 
         var response = "";
 
-        if(method >= 'bonga points'){
+        if('bonga points'){
             response = "Dial *400# and follow procedure";
         }else{
             response = "No";
         }
         res.json({
-            "text": response
+            "displayText": response
         })
     }
 })
