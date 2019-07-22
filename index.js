@@ -14,8 +14,8 @@ app.post('/', function(req, res){
 
     if(req.body.queryResult.action == "payment"){
 
-        console.log("Payment Action");
-        var method = req.body.queryResult.parameters.method;
+        
+        var method = req.body.queryResult.parameters.methods;
         console.log(method);
 
         var response = "";
