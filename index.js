@@ -19,14 +19,14 @@ app.post('/', function(req, res){
 
         var response = "";
 
-        // if(method >= 'bonga points'){
-        //     response = "Dial *400# and follow procedure";
-        // }else{
-        //     response = "No";
-        // }
-        // res.json({
-        //     "displayText": response
-        // })
+        if(age >= 18){
+            response = "Dial *400# and follow procedure";
+        }else{
+            response = "No";
+        }
+        res.json({
+            "displayText": response
+        })
 
     }
 
