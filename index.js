@@ -11,24 +11,24 @@ app.use(bodyParser.json());
 app.post('/', function(req, res){
     console.log(req.body)
 
-    if(req.body.queryResult.action == "payment"){
+    // if(req.body.queryResult.action == "payment"){
 
-        console.log("Payment Action");
-        var method = req.body.queryResult.parameters.method;
-        console.log(method);
+    //     console.log("Payment Action");
+    //     var method = req.body.queryResult.parameters.method;
+    //     console.log(method);
 
-        var response = "";
+    //     var response = "";
 
-        if(method == "method"){
-            response = "Dial *400# and follow procedure";
-        }else{
-            response = "No";
-        }
-        res.json({
-            "displayText": response
-        })
+    //     if(method == "method"){
+    //         response = "Dial *400# and follow procedure";
+    //     }else{
+    //         response = "No";
+    //     }
+    //     res.json({
+    //         "displayText": response
+    //     })
 
-    }
+    // }
 
 })
 
