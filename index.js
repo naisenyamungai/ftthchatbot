@@ -4,6 +4,11 @@ const
     express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
+    mongoose = require('mongoose');
+
+mongoose.connect(config.mongoURI, {useNewUrlParser: true});
+
+require('./models/Registration');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
