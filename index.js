@@ -15,6 +15,44 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+let Locations;
+
+let mdb = mongoose.connection;
+
+mdb.on('error', console.error.bind(console, 'connection error:'));
+
+mdb.once('open', function callback(){
+    
+    let locationsSchema = mongoose.Schema({
+        estate = String
+    });
+
+    Locations = mongoose.model('locations', locationsSchema);
+
+    app.post('/', function(req, res){
+        
+        if(req.body.queryResult.action == "installation"){
+            var location = req.body.queryResult.parameters.location;
+            console.log(location);
+
+            var response = "";
+
+            if(Location.find == 'location'){
+                response = "You are in a fiber covered location.";
+            } else{
+                response = "Dial *400# and request for fiber."
+            }
+            res.json({
+                "fulfillment_text": response
+            })
+        }
+
+        })
+    })
+
+
+
+
 app.post('/', function(req, res){
     console.log(req.body)
 
