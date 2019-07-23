@@ -9,6 +9,7 @@ const
 mongoose.connect(config.mongoURI, {useNewUrlParser: true});
 
 require('./models/Registration');
+require('./models/Locations');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
